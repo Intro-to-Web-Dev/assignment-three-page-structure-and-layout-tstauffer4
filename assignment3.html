@@ -1,5 +1,6 @@
+<!--Thomas Stauffer-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Assignment 3</title>
         <meta charset="UTF-8">
@@ -20,33 +21,68 @@
                 font-style: normal;
                 color: darkblue;
             }
-
-            .container{
-            
+            #container{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr 1fr 3fr 1fr;
+                width: 85%;
+                margin: auto;
+                border: 2px solid darkblue;
             }
             #nav{
-                display: grid;
-                grid-gap: 20px;
-                padding: 0;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                border-color: darkblue;
-                text-align: center;
+                display: flex;
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                min-height: 100px;
             }
-
+            
             #foot{
-                display: grid;
-                grid-gap: 20px;
-                padding: 0;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                fill: darkblue;
-                text-align: center;
+                display: flex;
+                grid-column-start: 4;
+                grid-column-end: 4;
+                grid-row-start: 4;
             }
 
             #main-container{
-                background: url(./golf-club.jpg);
-                width: 100%;
-                height: 100%;
+                display: flex;
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                background-image: url('golf-club.jpg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position-x: 50%;
+                 }
+
+            #main-container a{
+                flex: 1 0 100px;
+                color: white;
+
             }
+
+            #nav a{
+                flex: 1 0 100px;
+                text-align: center;
+                padding: 3%;
+                font-size: 1.6em;
+            }
+
+            #foot a{
+                flex: 1 0 60px;
+                text-align: center;
+                padding: 0.5%;
+                font-size: 1em;
+                color: white;
+            }
+            
+            #top-banner{
+                display: flex;
+                flex: 1 0 100px;
+            }
+
 
 
         </style>
@@ -61,15 +97,19 @@
             </nav>
             <section id="main-container">
                 <header id="header">
-                    <h1>FIND A COURSE</h1>
+                    <h1 style="color: white;">FIND A COURSE</h1>
                     <a href="#">SEARCH</a>
                 </header>
             </section>
-            <footer id="foot">
+            <footer id="foot" style="background-color: darkblue;">
                     <a href="#">FAQ</a>
                     <a href="#">CONTACT</a>
                     <a href="#">SIGN UP</a>
             </footer>
+            <section id="top-banner">
+                <img src="logo-04.png" alt="logo" width="300px" height="100px">
+                <img src="search-icon-05.png" alt="search icon" width="50px" height="50px">
+            </section>
         </div>
     </body>
 </html>
